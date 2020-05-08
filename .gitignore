@@ -1,0 +1,7 @@
+.DS_Store
+.ghost-cli
+.ghostpid
+config.development.json
+current
+versions
+*.log

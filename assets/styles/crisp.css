@@ -38,6 +38,7 @@ footer {
 	font-size:0.8em;
 	line-height: 1.5em;
 	color: #888;
+	text-align: right;	
 }
 article {
 	border-bottom: 0.1em #eee solid;
@@ -50,7 +51,7 @@ p, hr, h4, h5, h6 {
 }
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Bree Serif", serif;
+	font-family: "DM Serif", serif;
 	font-weight: 400 !important;
 }
 h1 {
@@ -213,6 +214,34 @@ h3.post-title {
 	background-color:#eee;
 	padding:0.5em;
 }
+
+  .col-2 {
+        float: left;
+        width: 50%;
+        padding: 10px;
+    }
+
+	.col-3 {
+        float: left;
+        width: 32%;
+        padding: 10px;
+    }
+
+    
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 900px) {
+        .col-2,.col-3 {
+            width: 100%;
+        }
+    }
+    
 #comments {
 	margin-top: 1em;
 	padding-bottom: 0.2em;
@@ -275,3 +304,4 @@ footer a:hover {
 		margin-left: 2em; 
 	}
 }
+

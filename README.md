@@ -53,3 +53,11 @@ This theme is licensed under the [MIT License](https://github.com/kathyqian/cris
 ![Single Post Screenshot](https://raw.github.com/kathyqian/crisp/master/assets/screenshot-single.png)
 
 ![Mobile Screenshot](https://raw.github.com/kathyqian/crisp/master/assets/screenshot-mobile.png)
+
+---
+
+
+Create a svelte app template 
+    - bundle apps into html blocks in ghost
+    - app() <Component />
+    

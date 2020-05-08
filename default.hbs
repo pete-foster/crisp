@@ -8,7 +8,7 @@
 	    <title>{{meta_title}}</title>
 			{{! Styles }}
 	    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700' rel='stylesheet' type='text/css'>
-			<link href='//fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+			<link href='//fonts.googleapis.com/css?family=DM+Serif' rel='stylesheet' type='text/css'>
 			<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 			<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 			<link rel="stylesheet" type="text/css" href="{{asset '/styles/crisp.css'}}">
@@ -24,10 +24,11 @@
 	    {{ghost_head}}
 	</head>
 	<body class="{{body_class}}">
-		<header id="header" {{#if @blog.cover_image}}style="background-image: url('{{@blog.cover_image}}')"{{/if}}>
-			{{#if @blog.logo}}<a id="logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
-			<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-			<p>{{@blog.description}}</p>
+		<!--<header id="header" {{#if @site.cover_image}} style="background-image: url('{{@site.cover_image}}')"{{/if}}>-->
+		<header id="header">			
+			{{#if @site.logo}}<a id="logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>{{/if}}
+			<h1><a href="{{@site.url}}">{{@site.title}}</a></h1>
+			<p>{{@site.description}}</p>
 			{{> follow}}
 			{{navigation}}
 		</header>
@@ -35,7 +36,11 @@
 			{{{body}}}
 		</main>
 		<footer id="footer">
-			<section id="footer-message">&copy; {{date format='YYYY'}} {{@blog.title}}. All rights reserved. Powered by <a href="http://ghost.org" target="_blank">Ghost</a>. <a href="https://github.com/kathyqian/crisp" target="_blank">Crisp</a> theme by <a href="http://kathyqian.com" target="_blank">Kathy Qian</a>.</section>
+			<section id="footer-message">
+				&copy; {{date format='YYYY'}} {{@site.title}}. 
+				All rights reserved. <br>
+				Powered by <a href="http://ghost.org" target="_blank">Ghost</a> using
+				<a href="https://github.com/kathyqian/crisp" target="_blank">Crisp theme</a>.</section>
 		</footer>
 	{{ghost_foot}}
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
